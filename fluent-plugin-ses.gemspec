@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency "fluentd"
   gem.add_runtime_dependency "aws-sdk"
-  gem.add_runtime_dependency "fluent-mixin-plaintextformatter", "~> 0.2.1"
+  gem.add_runtime_dependency "fluent-mixin-plaintextformatter", "0.2.0"
   gem.description = <<description
 Fluent output plugin for AWS SES
 description
