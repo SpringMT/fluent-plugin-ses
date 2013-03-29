@@ -20,16 +20,17 @@ Or install it yourself as:
 
 ```
 <source>
- </source>
+  aws_key_id         YOUR_AWS_KEY
+  aws_sec_key        YOUR_AWS_SECRET_KEY
+  from               from@example.com
+  to                 to@example.com
+  cc                 a@example.com,b@example.com #optional
+  reply_to_addresses reply@example.com #optional
+  subject            test
+</source>
 ```
-## Output Format
 
-Sample  
-
-Record  
-
-```json
-```
+Also see [AWS SDK for Ruby](http://docs.aws.amazon.com/AWSRubySDK/latest/frames.html).
 
 ## Contributing
 
