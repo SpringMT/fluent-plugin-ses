@@ -20,6 +20,7 @@ Or install it yourself as:
 
 ```
 <source>
+  type               ses
   aws_key_id         YOUR_AWS_KEY
   aws_sec_key        YOUR_AWS_SECRET_KEY
   from               from@example.com
