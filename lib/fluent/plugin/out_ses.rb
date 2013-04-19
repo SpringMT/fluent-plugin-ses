@@ -54,7 +54,7 @@ module Fluent
     end
 
     def write(chunk)
-      body_text = chunk.read
+      body_text = chunk.read.force_encoding "utf-8"
 
       options = {
         :source      => @from,
