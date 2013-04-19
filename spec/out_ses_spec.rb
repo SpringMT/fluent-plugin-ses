@@ -34,8 +34,6 @@ TEST_CONFIG = %[
   aws_sec_key
   from
   to
-  cc
-  reply_to_addresses
   subject     test
 ]
 
@@ -99,8 +97,15 @@ describe Fluent::SESOutput do
         pending 'If sending email actually, remove pending' do
         d = create_driver TEST_CONFIG
         time = Time.parse("2013-03-19 00:00:00 UTC").to_i
-        d.emit({"a"=>1}, time)
-        d.emit({"a"=>2}, time)
+        d.emit({"a" => 1}, time)
+        d.emit({"a" => "test"}, time)
+        d.emit({"a" => "テスト"}, time)
+        d.emit({"a" => nil}, time)
+        d.emit({"a" => true}, time)
+        d.emit({a: "テスト"}, time)
+        d.emit({a: :test}, time)
+        d.emit({a: :"テスト"}, time)
+        d.emit({:"テスト" => :"テスト"}, time)
         d.run
         end
       end
