@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "fluent-plugin-ses"
-  gem.version       = "0.0.3"
+  gem.version       = "0.0.4"
   gem.authors       = ["Spring_MT"]
   gem.email         = ["today.is.sky.blue.sky@gmail.com"]
   gem.summary       = %q{Fluent output plugin for AWS SES}
