@@ -1,4 +1,4 @@
-# Fluent::Plugin::SES [![Build Status](https://travis-ci.org/SpringMT/fluent-plugin-ses.png)](https://travis-ci.org/SpringMT/fluent-plugin-ses)
+# Fluent::Plugin::SES, a plugin for [Fluentd](http://fluentd.org) [![Build Status](https://travis-ci.org/SpringMT/fluent-plugin-ses.png)](https://travis-ci.org/SpringMT/fluent-plugin-ses)
 
 Fluent output plugin for AWS SES
 
