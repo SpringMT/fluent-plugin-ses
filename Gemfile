@@ -4,8 +4,8 @@ source 'https://rubygems.org'
 gemspec
 
 group :test do
-  gem 'rspec'
-  gem 'rspec-core'
+  gem 'rspec', '<2.14.2'
+  gem 'rspec-core', '<2.14.8'
   gem 'rake', '<10.1.2'
 end
 
