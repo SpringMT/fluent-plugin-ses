@@ -98,7 +98,7 @@ describe Fluent::SESOutput do
   describe :write do
     context 'test_write' do
       it do
-        pending 'If sending email actually, remove pending' do
+        skip 'If sending email actually, remove skip' do
         d = create_driver TEST_CONFIG
         time = Time.parse("2013-03-19 00:00:00 UTC").to_i
         d.emit({"a" => 1}, time)
