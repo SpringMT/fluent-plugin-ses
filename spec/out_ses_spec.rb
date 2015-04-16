@@ -2,7 +2,7 @@
 # encoding: UTF-8
 
 require File.dirname(__FILE__) + '/spec_helper'
-require 'aws-sdk'
+require 'aws-sdk-v1'
 
 DEFAULT_CONFIG = %[
   aws_key_id  foo
