@@ -7,12 +7,14 @@ require 'aws-sdk'
 DEFAULT_CONFIG = %[
   aws_key_id  foo
   aws_sec_key bar
+  aws_region  region
   from        spring
   to          mt
   subject     test
 ]
 INVALID_CONFIG_AWS_KEY_ID_NIL = %[
   aws_sec_key bar
+  aws_region  region
   from        spring
   to          mt
   subject     test
@@ -20,12 +22,14 @@ INVALID_CONFIG_AWS_KEY_ID_NIL = %[
 INVALID_CONFIG_FROM_NIL = %[
   aws_key_id  foo
   aws_sec_key bar
+  aws_region  region
   to          mt
   subject     test
 ]
 INVALID_CONFIG_TO_BLANK = %[
   aws_key_id  foo
   aws_sec_key bar
+  aws_region  region
   from        spring
   subject     test
 ]
