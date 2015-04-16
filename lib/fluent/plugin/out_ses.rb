@@ -34,7 +34,7 @@ module Fluent
         options[:access_key_id]     = @aws_key_id
         options[:secret_access_key] = @aws_sec_key
       end
-      AWS.config(:ses => { :region => @aws_region }
+      AWS.config(:ses => { :region => @aws_region })
       @ses = AWS::SimpleEmailService.new options
 
       to_addresses  = @to.split ","
