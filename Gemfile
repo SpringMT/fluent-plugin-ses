@@ -6,6 +6,6 @@ gemspec
 group :test do
   gem 'rspec'
   gem 'rspec-core'
-  gem 'rake'
+  gem 'rake', '<10.1.2'
 end
 
