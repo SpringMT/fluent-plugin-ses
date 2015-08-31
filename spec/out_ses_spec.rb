@@ -46,8 +46,8 @@ describe Fluent::SESOutput do
   describe :configure do
     before do
       dummy_object = (Class.new { define_method :verified? do; true end }).new
-      AWS::SimpleEmailService.any_instance.stub(:identities).and_return({'spring' => dummy_object})
-      AWS::SimpleEmailService.any_instance.stub_chain(:client, :send_email).and_return(true)
+      allow_any_instance_of(AWS::SimpleEmailService).to receive(:identities).and_return({'spring' => dummy_object})
+      allow_any_instance_of(AWS::SimpleEmailService).to receive_message_chain(:client, :send_email).and_return(true)
     end
     context 'valid' do
       it { d = create_driver }
@@ -64,7 +64,7 @@ describe Fluent::SESOutput do
     context 'invalid from mail' do
       before do
         dummy_object = (Class.new { define_method :verified? do; false end }).new
-        AWS::SimpleEmailService.any_instance.stub(:identities).and_return({'spring' => dummy_object})
+        allow_any_instance_of(AWS::SimpleEmailService).to receive(:identities).and_return({'spring' => dummy_object})
       end
       it { expect{ d = create_driver DEFAULT_CONFIG; d.run }.to raise_error(Fluent::ConfigError) }
     end
@@ -77,8 +77,8 @@ describe Fluent::SESOutput do
     context 'valid' do
       before do
         dummy_object = (Class.new { define_method :verified? do; true end }).new
-        AWS::SimpleEmailService.any_instance.stub(:identities).and_return({'spring' => dummy_object})
-        AWS::SimpleEmailService.any_instance.stub_chain(:client, :send_email).and_return(true)
+        allow_any_instance_of(AWS::SimpleEmailService).to receive(:identities).and_return({'spring' => dummy_object})
+        allow_any_instance_of(AWS::SimpleEmailService).to receive_message_chain(:client, :send_email).and_return(true)
       end
       it do
         d = create_driver
