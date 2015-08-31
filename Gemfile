@@ -7,5 +7,6 @@ group :test do
   gem 'rspec'
   gem 'rspec-core'
   gem 'rake'
+  gem 'test-unit'
 end
 
